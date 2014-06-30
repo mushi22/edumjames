@@ -39,3 +39,15 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem 'devise'
+gem 'foundation-rails'
+gem 'haml-rails'
+
+group :development do
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'rails_apps_pages'
+  gem 'rails_layout'
+end
+
