@@ -1,7 +1,9 @@
-%h1 Editing example
+.row
+  .large-12.columns
+    %h1 Editing example
 
-= render 'form'
+    = render 'form'
 
-= link_to 'Show', @example
-\|
-= link_to 'Back', examples_path
+    = link_to 'Show', [@subtopic, @example]
+    \|
+    = link_to 'Back', subtopic_examples_path

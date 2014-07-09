@@ -21,6 +21,8 @@ class SubtopicsController < ApplicationController
   # GET /subtopics/1
   # GET /subtopics/1.json
   def show
+    @subtopic = Subtopic.find(params[:id])
+    @proofs = @subtopic.proofs
   end
 
   # GET /subtopics/new

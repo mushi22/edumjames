@@ -1,4 +1,4 @@
-= form_for @proof do |f|
+= form_for ([@subtopic, @proof]) do |f|
   - if @proof.errors.any?
     #error_explanation
       %h2= "#{pluralize(@proof.errors.count, "error")} prohibited this proof from being saved:"

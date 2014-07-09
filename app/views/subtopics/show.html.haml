@@ -17,9 +17,18 @@
       .proof
         %b Proof:
         //= raw @subtopic.proof
+        -@proofs.each do |proof|
+          %br=link_to proof.name, [@subtopic, proof]
+        %br
+        %b= link_to "All Proofs", subtopic_proofs_path(@subtopic)
+        %br
+        %b= link_to "Create new proof", new_subtopic_proof_path(@subtopic)
+        
     %p
       %b Example:
       //= @subtopic.example
+      %br
+      %b= link_to "Create new Example", new_subtopic_example_path(@subtopic)
 
     = link_to 'Edit', edit_subtopic_path(@subtopic)
     \|

@@ -9,6 +9,10 @@
       = @course.description
       
     %p
+      %b= link_to "Create Topic for this course", new_course_topic_path(@course)
+      
+    %p
+    
       %b Your Topics:
       %br
       -@topics.each do |topic|

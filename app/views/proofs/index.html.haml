@@ -1,23 +1,25 @@
-%h1 Listing proofs
+.row
+  .large-12.columns
+    %h1 Listing proofs
 
-%table
-  %tr
-    %th Name
-    %th Video link
-    %th Content
-    %th
-    %th
-    %th
+    %table
+      %tr
+        %th Name
+        %th Video link
+        %th Content
+        %th
+        %th
+        %th
 
-  - @proofs.each do |proof|
-    %tr
-      %td= proof.name
-      %td= proof.video_link
-      %td= proof.content
-      %td= link_to 'Show', proof
-      %td= link_to 'Edit', edit_proof_path(proof)
-      %td= link_to 'Destroy', proof, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - @proofs.each do |proof|
+        %tr
+          %td= proof.name
+          %td= proof.video_link
+          %td.proof= raw proof.content
+          %td= link_to 'Show', [@subtopic, proof]
+          %td= link_to 'Edit', edit_subtopic_proof_path(@subtopic, proof)
+          %td= link_to 'Destroy', [@subtopic, proof], :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
+    %br
 
-= link_to 'New Proof', new_proof_path
+    = link_to 'New Proof', new_subtopic_proof_path

@@ -2,8 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
 .proof{
 //  font-family:'Times';
+
+  //0 Padding is used to fix the height
+  // of some of the lines used in the latex text
   td {
     padding:0px;
   }

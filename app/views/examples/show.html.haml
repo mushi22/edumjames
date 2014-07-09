@@ -1,15 +1,17 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @example.name
-%p
-  %b Video link:
-  = @example.video_link
-%p
-  %b Content:
-  = @example.content
-
-= link_to 'Edit', edit_example_path(@example)
-\|
-= link_to 'Back', examples_path
+.row
+  .large-12.columns
+    %p#notice= notice
+    %p
+      %b Name:
+      = @example.name
+    %p
+      %b Video link:
+      = @example.video_link
+      = raw YouTubeAddy.youtube_embed_url(@example.video_link,853,480)
+    %p
+      %b Content:
+      .proof
+        = raw @example.content
+    = link_to 'Edit', edit_subtopic_example_path
+    \|
+    = link_to 'Back', subtopic_examples_path

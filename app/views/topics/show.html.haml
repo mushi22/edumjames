@@ -1,12 +1,14 @@
-%p#notice= notice
+.row
+  .large-12.columns
+    %p#notice= notice
 
-%p
-  %b Name:
-  = @topic.name
-%p
-  %b Description:
-  = @topic.description
+    %p
+      %b Name:
+      = @topic.name
+    %p
+      %b Description:
+      = @topic.description
 
-= link_to 'Edit', edit_course_topic_path(@course, @topic)
-\|
-= link_to 'Back', course_topics_path
+    = link_to 'Edit', edit_course_topic_path(@course, @topic)
+    \|
+    = link_to 'Back', course_topics_path

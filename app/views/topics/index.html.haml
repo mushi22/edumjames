@@ -1,21 +1,23 @@
-%h1 Listing topics
+.row
+  .large-12.columns
+    %h1 Listing topics
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th
-    %th
-    %th
+    %table
+      %tr
+        %th Name
+        %th Description
+        %th
+        %th
+        %th
 
-  - @topics.each do |topic|
-    %tr
-      %td= topic.name
-      %td= topic.description
-      %td= link_to 'Show', [@course, topic]
-      %td= link_to 'Edit', [:edit, @course, topic]
-      %td= link_to 'Destroy', [@course, topic], :method => :delete, :data => { :confirm => 'Are you sure?' }
+      - @topics.each do |topic|
+        %tr
+          %td= topic.name
+          %td= topic.description
+          %td= link_to 'Show', [@course, topic]
+          %td= link_to 'Edit', [:edit, @course, topic]
+          %td= link_to 'Destroy', [@course, topic], :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
+    %br
 
-= link_to 'New Topic', new_course_topic_path
+    = link_to 'New Topic', new_course_topic_path
