@@ -1,0 +1,40 @@
+$card-blue: #3A6D98;
+$card-red: #ED1C24;
+body, h1, h2, h3, h4{
+  font-family: 'Lato', sans-serif;
+}
+
+.hero-title{
+  color:white;
+}
+
+.title{
+  font-size:40px;
+}
+.vis-title{
+  font-size:40px;
+}
+
+.sub-title{
+  font-size:17px;
+}
+
+.card-title{
+  color: $card-blue;
+}
+
+.card-sub-title{
+  color:$card-red;
+}
+
+.thin{
+  font-weight: 300;
+}
+
+.thick{
+  font-weight:700;
+}
+
+.thick{
+  font-weight:700;
+}

@@ -11,7 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630013649) do
+ActiveRecord::Schema.define(version: 20140709054903) do
+
+  create_table "courses", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "examples", force: true do |t|
+    t.string   "name"
+    t.string   "video_link"
+    t.text     "content"
+    t.integer  "subtopic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "proofs", force: true do |t|
+    t.string   "name"
+    t.string   "video_link"
+    t.text     "content"
+    t.integer  "subtopic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subtopics", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "topic_id"
+  end
+
+  create_table "topics", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

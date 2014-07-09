@@ -4,6 +4,7 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'Edumjames'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Edumjames'}"}
+    %link{href: "http://fonts.googleapis.com/css?family=Lato:300,400,700", rel: "stylesheet", type: "text/css"}/
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     -# Modernizr is required for Zurb Foundation
     = javascript_include_tag 'vendor/modernizr'
@@ -11,7 +12,9 @@
     = csrf_meta_tags
   %body
     %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
+      -if signed_in?
+        = render 'layouts/navigation'
+      -else 
+        =render 'layouts/visitor_navigation'
       = render 'layouts/messages'
-      = yield
+    = yield

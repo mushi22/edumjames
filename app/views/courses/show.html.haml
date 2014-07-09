@@ -1,0 +1,21 @@
+.row
+  .large-12.columns
+    %p#notice= notice
+
+    %p
+      = @course.name
+    %p
+      %b Description:
+      = @course.description
+      
+    %p
+      %b Your Topics:
+      %br
+      -@topics.each do |topic|
+        %b= link_to topic.name, [@course, topic]
+        %br
+      
+
+    = link_to 'Edit', edit_course_path(@course)
+    \|
+    = link_to 'Back', courses_path

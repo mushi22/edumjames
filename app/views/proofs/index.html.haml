@@ -1,0 +1,23 @@
+%h1 Listing proofs
+
+%table
+  %tr
+    %th Name
+    %th Video link
+    %th Content
+    %th
+    %th
+    %th
+
+  - @proofs.each do |proof|
+    %tr
+      %td= proof.name
+      %td= proof.video_link
+      %td= proof.content
+      %td= link_to 'Show', proof
+      %td= link_to 'Edit', edit_proof_path(proof)
+      %td= link_to 'Destroy', proof, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Proof', new_proof_path

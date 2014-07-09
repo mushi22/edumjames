@@ -1,0 +1,56 @@
+$main-yellow: #D0C633;
+$secondary-yellow: #CCB356;
+$grey: #D8D8D8;
+
+.visitor_navigation{
+  background-color:$secondary-yellow;
+  padding:10px 0px 10px;
+  a {
+    color:white !important;
+  }
+}
+
+.hero{
+  background: url(image-path('background.jpg')) no-repeat center center;
+  height:550px;
+  padding:250px 0px 30px;
+  
+  .sub-title{
+    margin:15px 0px 30px;
+  }
+  
+}
+
+.hero2{
+  background-color:$secondary-yellow;
+  //height:50px;
+  padding:30px 0px 25px;
+  a {
+    color:white !important;
+  }
+}
+
+.hero3{
+  margin:40px 0px 40px;
+}
+
+.hero-area{
+  
+}
+
+.card{
+  padding:20px 15px;
+  border:1px solid $grey;
+  border-radius:5px;
+  line-height:25px;
+}
+
+
+
+.visitor-button{
+  margin-left:30px;
+}
+
+.visitor-links{
+  padding-top:15px;
+}
