@@ -24,5 +24,5 @@ end
 group :production do
   gem 'pg'
   gem 'rmagick', '~> 2.13.2'
-#  gem 'heroku_rails_deflate'
+  gem 'heroku_rails_deflate'
 end
