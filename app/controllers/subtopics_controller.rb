@@ -23,6 +23,7 @@ class SubtopicsController < ApplicationController
   def show
     @subtopic = Subtopic.find(params[:id])
     @proofs = @subtopic.proofs
+    @examples = @subtopic.examples
   end
 
   # GET /subtopics/new
@@ -82,6 +83,6 @@ class SubtopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subtopic_params
-      params.require(:subtopic).permit(:name, :description, :video_link, :proof, :example)
+      params.require(:subtopic).permit(:name, :description, :video_link, :proof, :example, :topic_id)
     end
 end

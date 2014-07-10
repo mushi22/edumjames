@@ -7,6 +7,9 @@
     %p
       %b Description:
       = @course.description
+    %p
+      %b University:
+      = @course.university
       
     %p
       %b= link_to "Create Topic for this course", new_course_topic_path(@course)

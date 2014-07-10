@@ -9,27 +9,32 @@
       %b Description:
       = @subtopic.description
     %p
-    %hr
-      %br
-      //=raw YouTubeAddy.youtube_embed_url(@subtopic.video_link,853,480)
+
+.row
+  .large-6.columns
     %p
-    %hr
       .proof
         %b Proof:
         //= raw @subtopic.proof
-        -@proofs.each do |proof|
+        - @proofs.each do |proof|
           %br=link_to proof.name, [@subtopic, proof]
         %br
         %b= link_to "All Proofs", subtopic_proofs_path(@subtopic)
         %br
         %b= link_to "Create new proof", new_subtopic_proof_path(@subtopic)
         
+
+  .large-6.columns
     %p
       %b Example:
-      //= @subtopic.example
+      - @examples.each do |example|
+        %br= link_to example.name, [@subtopic, example]
+      
       %br
       %b= link_to "Create new Example", new_subtopic_example_path(@subtopic)
-
-    = link_to 'Edit', edit_subtopic_path(@subtopic)
-    \|
-    = link_to 'Back', subtopics_path
+%hr
+  .row
+    .large-12.columns
+      = link_to 'Edit', edit_subtopic_path(@subtopic)
+      \|
+      = link_to 'Back', subtopics_path

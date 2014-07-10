@@ -19,49 +19,15 @@
   
 
 //Replace this area with actual classes once implemented
+
+
+
 .hero3
-  .row
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)    
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)   
-  
-  %br     
-        
-  .row
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)    
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)        
-
-  %br
-
-  .row
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)    
-    .large-4.columns
-      .card
-        .card-title.thick Engineering Vibration
-        .card-sub-title (Class 1)        
+  - @courses.each_slice(3).to_a.each do |group|
+    .row
+      - group.each do |course|
+        .large-4.columns
+          .card
+            .card-title.thick=link_to course.name, course
+            .card-sub-title= course.description
+            .card-sub-title= course.university

@@ -12,6 +12,7 @@ $grey: #D8D8D8;
 
 .hero{
   background: url(image-path('background.jpg')) no-repeat center center;
+  background-size:100%;
   height:550px;
   padding:250px 0px 30px;
   
@@ -39,6 +40,7 @@ $grey: #D8D8D8;
 }
 
 .card{
+  margin-bottom:20px;
   padding:20px 15px;
   border:1px solid $grey;
   border-radius:5px;

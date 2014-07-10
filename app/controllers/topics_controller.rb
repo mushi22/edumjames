@@ -9,6 +9,8 @@ class TopicsController < ApplicationController
   def show
     @course = Course.find(params[:course_id])
     @topic = @course.topics.find(params[:id])
+    @subtopics = @topic.subtopics
+    @new_subtopic = @topic.subtopics.build
   end
 
   def new
@@ -36,8 +38,6 @@ class TopicsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /topics/1
-  # PATCH/PUT /topics/1.json
   def update
     @course = Course.find(params[:course_id])    
     @topic = @course.topics.find(params[:id])
@@ -53,8 +53,6 @@ class TopicsController < ApplicationController
     end
   end
 
-  # DELETE /topics/1
-  # DELETE /topics/1.json
   def destroy
     @topic.destroy
     respond_to do |format|
