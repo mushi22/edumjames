@@ -22,6 +22,7 @@ group :development do
 end
 
 group :production do
+  gem 'newrelic_rpm'  
   gem 'pg'
   gem 'rmagick', '~> 2.13.2'
   gem 'heroku_rails_deflate'
