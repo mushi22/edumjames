@@ -6,9 +6,8 @@
       = @proof.name
       %br= link_to "Go back to parent subtopic", @subtopic
     %p
-      %b Video link:
+      %b Video:
       .center
-        = @proof.video_link
         =raw YouTubeAddy.youtube_embed_url(@proof.video_link,853,480)
     %p
     %hr

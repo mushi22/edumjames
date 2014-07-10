@@ -5,9 +5,9 @@
       %b Name:
       = @example.name
     %p
-      %b Video link:
-      = @example.video_link
-      = raw YouTubeAddy.youtube_embed_url(@example.video_link,853,480)
+      %b Video:
+      .center
+        = raw YouTubeAddy.youtube_embed_url(@example.video_link,853,480)
     %p
       %b Content:
       .proof
