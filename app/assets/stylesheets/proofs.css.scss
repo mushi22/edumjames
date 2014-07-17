@@ -6,11 +6,24 @@
 
 
 .proof{
-  
   padding:60px 40px;
   border:1px solid black;
-  
+  overflow:scroll;
   td {
     padding:0px;
   }
+}
+
+
+//For slider
+.gallery .holder {
+    width: 100%;
+    overflow: hidden;
+}
+.gallery .list {
+    width: 9999px;
+    overflow: hidden;
+}
+.gallery .item {
+    float: left;
 }
