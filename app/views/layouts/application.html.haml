@@ -15,6 +15,7 @@
       -if signed_in?
         = render 'layouts/navigation'
       -else 
-        =render 'layouts/visitor_navigation'
+        = render 'layouts/visitor_navigation'
       = render 'layouts/messages'
     = yield
+    =render 'layouts/textform'

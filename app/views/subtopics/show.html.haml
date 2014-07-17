@@ -1,14 +1,11 @@
 .row
   .large-12.columns
-    %p#notice= notice
-
-    %p
-      %b Name:
-      = @subtopic.name
-    %p
-      %b Description:
-      = @subtopic.description
-    %p
+    .show-info
+      .center
+        .sub-title.thin.grey= @topic.name
+        .mid-title= @subtopic.name
+        = raw @subtopic.description
+      %p
 
 .row
   .large-6.columns

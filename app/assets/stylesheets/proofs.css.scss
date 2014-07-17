@@ -6,10 +6,10 @@
 
 
 .proof{
-//  font-family:'Times';
-
-  //0 Padding is used to fix the height
-  // of some of the lines used in the latex text
+  
+  padding:60px 40px;
+  border:1px solid black;
+  
   td {
     padding:0px;
   }

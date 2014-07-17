@@ -11,6 +11,7 @@
     = f.text_field :name
   .field
     = f.label :description
-    = f.text_area :description
+    = render 'layouts/textbar'
+    = f.text_area :description, :id => 'wysihtml5-textarea', :class => 'input_area'
   .actions
     = f.submit 'Save'

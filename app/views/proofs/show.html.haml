@@ -1,20 +1,23 @@
-.row
-  .large-12.columns
+#wrapper
+  .row
+    .large-12.columns
 
-    %p
-      %b Name:
-      = @proof.name
-      %br= link_to "Go back to parent subtopic", @subtopic
-    %p
-      %b Video:
-      .center
-        =raw YouTubeAddy.youtube_embed_url(@proof.video_link,853,480)
-    %p
-    %hr
+      %p
+        %b Name:
+        = @proof.name
+        %br= link_to "Go back to parent subtopic", @subtopic
+      %p
+        %b Video:
+        .center
+          =raw YouTubeAddy.youtube_embed_url(@proof.video_link,853,480)
+      %p
+
+  .row
+    .large-12.columns  
       %b Content:
       .proof
         =raw @proof.content
 
-    = link_to 'Edit', edit_subtopic_proof_path(@subtopic, @proof)
-    \|
-    = link_to 'Back', subtopic_proofs_path
+      = link_to 'Edit', edit_subtopic_proof_path(@subtopic, @proof)
+      \|
+      = link_to 'Back', subtopic_proofs_path
